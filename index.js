@@ -6,7 +6,7 @@ var fs = require("fs");
 
 
 // array of words
-var wordBank = ["january", "february", "march"];
+var wordBank = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
 // word chosen from answer
 var keyWord = wordBank[Math.floor(Math.random() * wordBank.length);
 // call keyWord splitter function in word.js file
