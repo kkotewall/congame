@@ -2,14 +2,14 @@ var firstFunction = require("./letter");
 var SecondConstructor= require("./letter");
 
 
-var keyLetters = [];
 
 //constructor
 function Word() {
+	this.keyWord = keyWord;
+	this.keyLetters = [];
+	this.placeholders= [];
 
-	
-// 
-	function
+	this.
 };
 
 
