@@ -11,26 +11,28 @@
 //require the letter.js constructor
 var letterCon = require("./letter");
 
-//A function that returns a string representing the word. 
+//A function that returns a string representing the selected answer word. 
 //This should call the function on each letter object (the first function defined in Letter.js)
-var word = function(keyWord) {
+var Word = function(keyWord) {
 	this.keyWord = keyWord;
 	this.keyLetters = [];
-	this.placeholders= [];
+	this.placeholder= [];
 
-	//hide selected word from user with placeholders
+	//hide selected letter in keyword from user with placeholders
+	//should call this.returnCharacter function
 	this.splitKey = function() {
-		this.keyLetters = this.keyWord.split("");
-		placeholders = this.keyWord.length;
-		console.log(this.placeholders.join("*"));
-		//should call this.returnCharacter function
+		for (var i = 0; i < keyWord.length; ++i) {
+		var letterObject = new letterCon(keyWord[i]);
+		this.placeholder.push()
 	}
+
+
+
 	this.showKey = function() {
 
 		//should call this.guess function
 	}
 };
-
 
 
 

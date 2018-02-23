@@ -1,4 +1,4 @@
-
+//character is the user's guess from index
 var Letter = function(character) {
 	//intial Boolean value; function takes character as argument
 	this.letterGuess = false;
@@ -10,11 +10,12 @@ var Letter = function(character) {
 			console.log(this.character);
 		}
 		else {
-			console.log("Try a different letter.");
+			return "*";
 		}
+	}
 	//check userguess against hidden letter; return Boolean or placeholder
 	this.guess = function() {
-		if (this.character === this.letterObject) {
+		if (this.character === this.keyLetter[i]) {
 			this.letterGuess = true;
 			this.returnCharacter();
 		}
@@ -22,7 +23,7 @@ var Letter = function(character) {
 			return "*";
 		}
 	}
-};
+}
 
 //export constructor
 module.exports = Letter;
