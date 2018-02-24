@@ -4,7 +4,7 @@ var Letter = function(character) {
 	this.letterGuess = false;
 	this.character = character;
 
-	//return hidden letter if userguess is correct (Boolean)
+	//return letter for correct guess (Boolean) or a placeholder
 	this.returnCharacter = function() {
 		if (this.letterGuess) {
 			console.log(this.character);
@@ -13,14 +13,15 @@ var Letter = function(character) {
 			return "*";
 		}
 	}
-	//check userguess against hidden letter; return Boolean or placeholder
-	this.guess = function() {
+	//check userguess against correct letter; return Boolean or placeholder
+	this.checkLetter = function() {
 		if (this.character === this.keyLetter[i]) {
 			this.letterGuess = true;
+			console.log("Correct!");
 			this.returnCharacter();
 		}
 		else {
-			return "*";
+			console.log("Incorrect. Guess another letter.");
 		}
 	}
 }
